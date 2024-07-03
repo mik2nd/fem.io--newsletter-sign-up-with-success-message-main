@@ -33,9 +33,9 @@
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
           <ul class="list-stylist">
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
+            <li><span>Product discovery and building what matters</span></li>
+            <li><span>Measuring to ensure updates are a success</span></li>
+            <li><span>And much more!</span></li>
           </ul>
 
           <div class="container-input">
@@ -48,10 +48,12 @@
               name="email"
               id="email"
               placeholder="email@company.com"
+              spellcheck="false"
+              onkeyup="emailValidate()"
             />
-            <span class="invalid">Valid email required</span>
+            <span class="invalid"></span>
 
-            <button class="btn accent submit">
+            <button class="btn accent submit" onclick="submit()">
               Subscribe to monthly newsletter
             </button>
           </div>
@@ -78,7 +80,7 @@
 
           <p>
             A confirmation email has been sent to
-            <strong>ash@loremcompany.com</strong>. Please open it and click the
+            <strong class="inputed"></strong>. Please open it and click the
             button inside to confirm your subscription.
           </p>
         </div>

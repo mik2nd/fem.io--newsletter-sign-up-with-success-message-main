@@ -26,6 +26,10 @@ img {
   width: 100%;
   display: block;
 }
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+}
 button {
   border: none;
   cursor: pointer;
@@ -37,17 +41,16 @@ button {
   padding: 1rem;
 }
 .list-stylist {
-  margin-block: 2rem;
-  padding-left: 1.5rem;
+  margin-block: 2.5rem;
+  list-style-image: url(assets/images/icon-list.svg);
 
-  > li {
-    padding-left: 1rem;
-  }
-  > li::marker {
-    content: url(assets/images/icon-list.svg);
-  }
   > * {
     margin-block: 1rem;
+
+    > span {
+      position: relative;
+      top: -5px;
+    }
   }
 }
 .btn {
@@ -74,26 +77,17 @@ button {
     outline-color: black;
     color: black;
   }
-  &:invalid {
-    outline-color: var(--clr-accent);
-    color: var(--clr-accent);
-    background-color: hsl(4, 100%, 67%, 0.1);
-  }
 }
 .email-label {
   font-size: 0.75rem;
 }
 .invalid {
-  display: none;
   position: absolute;
   top: 0;
   right: 0;
   color: var(--clr-accent);
   font-weight: bold;
   font-size: 0.75rem;
-}
-.input-text:invalid ~ .invalid {
-  display: block;
 }
 .image-desktop {
   display: none;
@@ -109,6 +103,7 @@ button {
 .accent {
   border-radius: 0.5rem;
   transition: background-color 750ms;
+  font-weight: bold;
 
   &:hover {
     background-color: var(--clr-accent);
